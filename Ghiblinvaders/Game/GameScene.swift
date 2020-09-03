@@ -141,8 +141,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         super.touchesBegan(touches, with: event)
         guard let touch = touches.first else {return}
         let location = touch.location(in: self)
-        player.position = location
-        player.run(.move(to: location, duration: 0.1))
+        //player.position = location
+        player.run(.move(to: location, duration: 0.2))
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
