@@ -30,7 +30,7 @@ class MenuScene: SKScene {
             let nodesArray = self.nodes(at: location)
             if nodesArray.first?.name == "startButton" {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let gameScene = GameScene(fileNamed: "GameScene")!
+                let gameScene = SelectionScene(fileNamed: "SelectionScene")!
 //                gameScene.position = CGPoint(x: 320, y: 0)
                 self.view?.presentScene(gameScene, transition: transition)
             }

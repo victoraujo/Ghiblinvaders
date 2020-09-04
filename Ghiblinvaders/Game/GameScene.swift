@@ -17,6 +17,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameTimer: Timer!
     var tiroTimer: Timer!
     var livesArray:[SKSpriteNode]!
+    var char: String = ""
+    
     
     var score: Int = 0 {
         didSet{
@@ -65,7 +67,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addLives()
         
         
-        player = SKSpriteNode(imageNamed: "kiki")
+        player = SKSpriteNode(imageNamed: char)
         player.position = CGPoint(x: 0, y: -350)
         self.addChild(player)
         self.physicsWorld.contactDelegate = self
@@ -114,6 +116,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let transition = SKTransition.fade(withDuration: 0.5)
                     let gameScene = GameOverScene(fileNamed: "GameOverScene")!
                     gameScene.score = self.score
+                    gameScene.char = self.char
                     self.view?.presentScene(gameScene, transition: transition)
                 }
             }

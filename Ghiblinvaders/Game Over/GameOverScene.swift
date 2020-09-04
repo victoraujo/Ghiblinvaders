@@ -17,7 +17,7 @@ class GameOverScene: SKScene {
     var directorLabel: SKLabelNode!
     var dateLabel: SKLabelNode!
     var films: [Film] = []
-    var char: String = "kiki"
+    var char: String = ""
     var filmName: String = ""
     var selectedFilm: Film!
     var background: SKSpriteNode!
@@ -42,11 +42,11 @@ class GameOverScene: SKScene {
             filmName = "Kiki's Delivery Service"
         }
         
-        if char == "totoro"{
+        else if char == "totoro"{
                    filmName = "My Neighbor Totoro"
                }
         
-        if char == "haku"{
+        else if char == "haku"{
             filmName = "Spirited Away"
         }
         
